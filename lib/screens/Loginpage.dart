@@ -1,3 +1,4 @@
+import 'package:artisanharbour/screens/Signup.dart';
 import 'package:flutter/material.dart';
 import 'package:artisanharbour/screens/OTPpage.dart';
 
@@ -97,11 +98,16 @@ class _LoginPageState extends State<LoginPage> {
                     Text("Don't have an account? "),
                     TextButton(
                       onPressed: () {
-                        // Add your sign up logic here
+                        Navigator.push(
+                          context,
+                          MaterialPageRoute(
+                            builder: (context) => SignUpPage(),
+                          ),
+                        );
                       },
                       child: Text(
                         'Sign Up',
-                        style: TextStyle(color: Colors.blue),
+                        style: TextStyle(color: Colors.orange),
                       ),
                     ),
                   ],

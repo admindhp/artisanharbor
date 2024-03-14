@@ -32,6 +32,7 @@ class CartScreen extends StatelessWidget {
       backgroundColor: Colors.white,
       appBar: AppBar(
         centerTitle: true,
+        automaticallyImplyLeading:false,
         backgroundColor: Colors.white,
         title: Text(
           "Shopping Cart (${cart.length})",

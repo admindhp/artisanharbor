@@ -1,3 +1,4 @@
+import 'package:artisanharbour/screens/HomeScreen.dart';
 import 'package:flutter/material.dart';
 
 class OTPPage extends StatefulWidget {
@@ -76,7 +77,7 @@ class _OTPPageState extends State<OTPPage> {
               SizedBox(height: 10),
               TextButton(
                 onPressed: () {
-                  // Implement resend OTP logic
+
                 },
                 child: Text(
                   'Resend OTP',
@@ -104,8 +105,13 @@ class _OTPPageState extends State<OTPPage> {
             FocusScope.of(context).nextFocus();
             _otp += value;
             if (_otp.length == 4) {
-              // Perform OTP verification when 4 digits are entered
-              // Implement your logic here
+              Navigator.push(
+                context,
+                MaterialPageRoute(
+                  builder: (context) => HomeScreen(
+                  ),
+                ),
+              );
             }
           }
         },

@@ -129,7 +129,8 @@ class _CheckoutPageState extends State<CheckoutPage> {
                   ),
                 ),
                 style: ElevatedButton.styleFrom(
-                  primary: Colors.orange, // Set button color to orange
+                  backgroundColor: Colors.orange,
+                  foregroundColor: Colors.white,// Set button color to orange
                   shape: RoundedRectangleBorder(
                     borderRadius: BorderRadius.circular(8), // Set button border radius
                   ),

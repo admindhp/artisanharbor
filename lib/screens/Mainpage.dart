@@ -38,7 +38,7 @@ class _MainpageState extends State<Mainpage> {
                             color: Colors.white,
                             fontSize: 30,
                             fontWeight: FontWeight.w500)),
-                    Text("Artician Harbour",
+                    Text("Artisan Harbor",
                         style: TextStyle(
                             color: Colors.white,
                             fontSize: 32,
