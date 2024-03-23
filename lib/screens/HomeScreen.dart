@@ -1,6 +1,9 @@
+import 'package:artisanharbour/screens/Aboutus.dart';
 import 'package:artisanharbour/screens/CartScreen.dart';
 import 'package:artisanharbour/screens/Mainpage.dart';
 import 'package:artisanharbour/screens/Profilepage.dart';
+import 'package:artisanharbour/screens/Searchpage.dart';
+import 'package:artisanharbour/screens/Settings.dart';
 import 'package:flutter/material.dart';
 import 'package:google_nav_bar/google_nav_bar.dart';
 
@@ -40,7 +43,7 @@ class _HomeScreenState extends State<HomeScreen> {
     return Scaffold(
       backgroundColor: Colors.white,
       appBar: AppBar(
-        backgroundColor: Colors.white,
+        backgroundColor: Colors.orangeAccent.withOpacity(0.5),
         elevation: 5.0,
         leading: Builder(
           builder: (BuildContext context) {
@@ -70,7 +73,12 @@ class _HomeScreenState extends State<HomeScreen> {
           Padding(
             padding: EdgeInsets.only(right: 20),
             child: InkResponse(
-              onTap: () {},
+              onTap: () {
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(builder: (context) => SearchPage()),
+                );
+              },
               child: Icon(
                 Icons.search,
                 size: 30,
@@ -81,13 +89,12 @@ class _HomeScreenState extends State<HomeScreen> {
         ],
       ),
       drawer: Drawer(
-
         child: ListView(
           padding: EdgeInsets.zero,
           children: [
             DrawerHeader(
               decoration: BoxDecoration(
-                color: Colors.grey.withOpacity(0.2),
+                color: Colors.orangeAccent.withOpacity(0.2),
               ),
               child: Center(
                 child: Image(
@@ -99,18 +106,24 @@ class _HomeScreenState extends State<HomeScreen> {
             ListTile(
               title: Text('Settings'),
               onTap: () {
-                // Update UI based on item 1
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(
+                    builder: (context) => SettingsPage()
+                  ),
+                );
               },
             ),
             ListTile(
               title: Text('About Us'),
               onTap: () {
-                // Update UI based on item 2
-              },
-            ),
-            ListTile(
-              title: Text('Log Out'),
-              onTap: () {
+
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(
+                      builder: (context) => AboutUsPage()
+                  ),
+                );
               },
             ),
           ],

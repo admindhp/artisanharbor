@@ -1,5 +1,6 @@
 import 'package:artisanharbour/models/product_model.dart';
 import 'package:artisanharbour/screens/Billingpage.dart';
+import 'package:artisanharbour/screens/orderplaced.dart';
 import 'package:flutter/material.dart';
 
 class CheckoutPage extends StatefulWidget {
@@ -45,6 +46,8 @@ class _CheckoutPageState extends State<CheckoutPage> {
                         style: TextStyle(fontSize: 20, fontWeight: FontWeight.bold),
                       ),
                       SizedBox(height: 10),
+                      Text(widget.billingDetails.name),
+                      Text(widget.billingDetails.phoneNumber),
                       Text(widget.billingDetails.address), // Access address from billingDetails
                     ],
                   ),
@@ -118,8 +121,12 @@ class _CheckoutPageState extends State<CheckoutPage> {
               SizedBox(height: 20),
               ElevatedButton(
                 onPressed: () {
-                  // Implement checkout logic
-                  Navigator.pop(context); // Navigate back after checkout
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(
+                      builder: (context) => OrderPlacedPage(),
+                    ),
+                  );
                 },
                 child: Padding(
                   padding: EdgeInsets.symmetric(vertical: 16.0),

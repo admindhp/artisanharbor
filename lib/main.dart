@@ -1,5 +1,6 @@
 import 'package:artisanharbour/screens/HomeScreen.dart';
 import 'package:artisanharbour/screens/Loginpage.dart';
+import 'package:artisanharbour/screens/Logintype.dart';
 import 'package:flutter/material.dart';
 
 void main() {
@@ -19,7 +20,7 @@ class MyApp extends StatelessWidget {
         colorScheme: ColorScheme.fromSeed(seedColor: Colors.white),
         useMaterial3: true,
       ),
-      home: LoginPage(),
+      home: ChooseLoginTypePage(),
     );
   }
 }
